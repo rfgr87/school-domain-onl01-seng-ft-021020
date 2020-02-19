@@ -3,13 +3,12 @@
 class School
   def initialize(name)
     @name = name
+    @roster = {}
   end
   
   def name
     @name
   end
-  
-  @roster = {}
   
   def add_student(student, grade)
     if !(@roster[grade] == nil)
