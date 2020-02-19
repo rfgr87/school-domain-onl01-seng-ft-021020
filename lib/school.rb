@@ -24,11 +24,7 @@ class School
   end
   
   def grade(grade)
-    @roster.each do |hash_grade, array_of_students|
-      if hash_grade == grade
-        array_of_students
-      end
-    end
+    @roster[grade]
   end
   
   def sort
