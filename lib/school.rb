@@ -31,6 +31,7 @@ class School
     hash = {}
     @roster.collect do |grade, students|
       students.sort
+      @roster
     end
   end
   
