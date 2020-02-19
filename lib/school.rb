@@ -31,5 +31,12 @@ class School
       end
     end
   end
-
+  
+  def sort
+    ROSTER.each do |grade, students|
+      students.sort
+    end
+    ROSTER
+  end
+  
 end
