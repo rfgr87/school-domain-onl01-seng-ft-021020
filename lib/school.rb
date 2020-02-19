@@ -9,19 +9,23 @@ class School
     @name
   end
   
-  ROSTER = {}
+  @roster = {}
   
   def add_student(student, grade)
-    ROSTER[grade] = []
-    ROSTER[grade] << student
+    if !(@roster[grade] == nil)
+      @roster[grade] = []
+      @roster[grade] << student
+    else
+      @roster[grade] << student
+    end
   end
   
   def roster
-    ROSTER
+    @roster
   end
   
   def grade(grade)
-    ROSTER.each do |hash_grade, array_of_students|
+    @roster.each do |hash_grade, array_of_students|
       if hash_grade == grade
         array_of_students
       end
@@ -29,10 +33,10 @@ class School
   end
   
   def sort
-    ROSTER.each do |grade, students|
+    @roster.each do |grade, students|
       students.sort
     end
-    ROSTER
+    @roster
   end
   
 end
